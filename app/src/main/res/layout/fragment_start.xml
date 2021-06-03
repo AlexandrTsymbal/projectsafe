@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="startFragment"
+            type="com.example.project.StartFragment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="309dp"
+            android:layout_height="335dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/popular"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:button="@android:drawable/ic_input_add"
+                android:text="200 ПОПУЛЯРНЫХ ЛЮДЕЙ"
+                android:onClick="@{() -> startFragment.goTo(0)}"
+                android:textColorHint="#F12D2D" />
+
+            <RadioButton
+                android:id="@+id/starwars"
+                style="@android:style/Widget.DeviceDefault.Light.CompoundButton.RadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:button="@android:drawable/ic_delete"
+                android:text="100 ПЕРСОНАЖЕЙ ЗВЕЗДНЫХ ВОЙН"
+                android:textColor="#000000" />
+
+            <RadioButton
+                android:id="@+id/monarch"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:button="@android:drawable/ic_delete"
+                android:text="100 ВЕЛИКИХ ПРАВИТЕЛЕЙ" />
+
+            <RadioButton
+                android:id="@+id/show"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:button="@android:drawable/ic_delete"
+                android:text="100 ЗВЕЗД ШОУ-БИЗНЕСА" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="395dp"
+            android:layout_height="50dp"
+            android:text="ВЫБЕРИ КАТЕГОРИЮ"
+            android:textAlignment="center"
+            android:textColor="#F60000"
+            android:textColorHint="@color/design_default_color_error"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.102" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
